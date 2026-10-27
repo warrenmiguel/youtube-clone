@@ -1,0 +1,10 @@
+*{
+  /* this is a comment*/
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: rgb(235, 235, 235);
+  padding-top: 90px;
+  padding-right: 30px;
+}

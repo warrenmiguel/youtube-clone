@@ -1,0 +1,64 @@
+#sidebar-toggle {
+  display: none;
+}
+
+.hamburger-label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.side-bar {
+  z-index: 200;
+  background-color: white;
+  border-right: 1px solid rgba(175, 175, 175, 0.7);
+  padding-top: 4px;
+  position: fixed;
+  top: 72px;
+  left: 0;
+  bottom: 0;
+  width: 90px;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  overflow: hidden;
+  transition: width 0.3s ease-in-out;
+}
+
+#sidebar-toggle:checked ~ .side-bar {
+  width: 240px;
+}
+
+.youtube-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 86px;
+  padding-left: 24px;
+  gap: 24px;
+  white-space: nowrap;
+}
+
+.youtube-links:hover {
+  background-color: rgb(230, 230, 230);
+  cursor: pointer;
+}
+
+.youtube-links img {
+  padding-left: 8px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.link-title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+#sidebar-toggle:checked ~ .side-bar .link-title {
+  opacity: 1;
+}

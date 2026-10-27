@@ -1,0 +1,88 @@
+.video-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 40px;
+  margin-left: 128px;                     /* Default gap for the 90px compact sidebar */
+  transition: margin-left 0.3s ease-in-out; /* Smooth slide effect when toggled */
+}
+
+/* When the sidebar is expanded, push the video grid over */
+#sidebar-toggle:checked ~ .video-grid {
+  margin-left: 278px;                     /* 240px expanded sidebar width + 38px gap */
+}
+
+@media (max-width: 680px ){
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 681px) and (max-width: 999px) {
+  .video-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1250px) {
+  .video-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.video-info p {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.video-thumbnail {
+  width: 100%; 
+}
+
+.video-content {
+  margin-top: 6px;
+  display: flex;
+  gap: 14px;
+}
+
+.video-profile {
+  height: 48px;
+  border-radius: 24px;
+}
+
+.video-info {
+  flex: 1;
+}
+
+.video-title {
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 30px;
+}
+
+.video-author {
+  margin-top: 18px;
+  color: #656565;
+}
+
+.video-stats {
+  margin-top: 8px;
+  color: #656565;
+}
+
+.thumbnail-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.time {
+  position: absolute;
+  background-color: black;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 5px 6px;
+  border-radius: 3px;
+  right: 8px;
+  bottom: 10px;
+}
